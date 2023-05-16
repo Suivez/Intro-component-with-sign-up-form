@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  background-color: var(--red);
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 150px;
+}
+
+.left-content,
+.right-content {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  color: white;
+}
+
+.left-content h1 {
+  font-weight: 700;
+}
+
+.left-content p {
+  font-weight: 400;
+}
+
+.right-content button {
+  width: 100%;
+  padding: 15px 60px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  margin: 20px;
+  background-color: var(--blue);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0px 7px 0px 0px rgba(66, 68, 90, 0.2);
+}
+
+.right-content button span {
+  font-weight: 400;
+}
+
+.input-box {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 7px 0px 0px rgba(66, 68, 90, 0.2);
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  margin: 8px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  border: 1px solid var(--grayish-blue);
+  padding: 12px;
+  padding-left: 25px;
+  font-weight: 600;
+}
+
+.input-box input:focus {
+  border-color: var(--blue);
+  color: black;
+}
+
+.input-box input::placeholder {
+  font-weight: 600;
+}
+
+.input-box button {
+  border-radius: 5px;
+  padding: 15px 0;
+  width: 100%;
+  margin: 5px;
+  background-color: hsl(154, 59%, 51%);
+  text-transform: uppercase;
+  font-weight: 600;
+  box-shadow: none;
+  letter-spacing: 0.1rem;
+}
+
+.input-box button:hover {
+  cursor: pointer;
+  background-color: hsla(154, 59%, 51%, 0.9);
+}
+
+.input-box p {
+  color: var(--grayish-blue);
+  font-size: 0.7rem;
+  text-align: center;
+  margin: 5px;
+}
+
+.input-box p span {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.input-box .error-state {
+  color: var(--red);
+  font-size: 0.7rem;
+  width: 100%;
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  font-style: italic;
+}
+
+.input-box .wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+picture {
+  position: absolute;
+  top: 17px;
+  right: 10px;
+}
+
+@media (max-width: 875px) {
+  .App {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .left-content,
+  .right-content {
+    width: 100%;
+  }
+
+  .left-content h1,
+  p {
+    text-align: center;
+  }
+
+  .right-content {
+    margin-top: -30px;
+  }
+}
